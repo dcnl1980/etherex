@@ -6,7 +6,7 @@ module.exports = {
     "./app/app.jsx"
   ],
   resolveLoader: {
-    root: path.join(__dirname, 'node_modules')
+    modules: ['node_modules']
   },
   node: {
     fs: 'empty',
@@ -28,10 +28,10 @@ module.exports = {
   },
   plugins: [],
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.json']
   },
   module: {
-    loaders: [
+    rules: [
       { test: /\.css$/, loader: "style!css" },
       { test: /\.less$/, loader: "style!css!less" },
       { test: /\.jsx$/, loader: "react-hot" },
