@@ -9,6 +9,14 @@ Decentralized exchange built on Ethereum.
 
 <img src="/frontend/screenshot.png" />
 
+
+Development updates (2020)
+-----
+
+NPM: found 59 vulnerabilities (19 low, 18 moderate, 20 high, 2 critical)
+
+TODO: fix all vulnerabilities in the code
+
 About
 -----
 
