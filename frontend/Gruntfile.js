@@ -34,14 +34,14 @@ module.exports = function(grunt) {
       },
       start: {
         keepAlive: true,
-        port: 8089,
+        port: 8085,
         contentBase: "app",
         hot: true,
         webpack: {
           devtool: "eval",
           debug: true,
           entry: webpackConfig.entry.concat(
-            "webpack-dev-server/client?http://localhost:8089",
+            "webpack-dev-server/client?http://localhost:8085", // Localhost development
             "webpack/hot/dev-server"
           ),
           plugins: webpackConfig.plugins.concat(
