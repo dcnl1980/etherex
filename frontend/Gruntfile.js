@@ -14,13 +14,13 @@ module.exports = function(grunt) {
               // This has effect on the react lib size
               "NODE_ENV": JSON.stringify("production")
             }
-          }),
-          new webpack.optimize.DedupePlugin(),
-          new webpack.optimize.UglifyJsPlugin({
-            mangle: {
-              except: ["Array", "BigInteger", "Boolean", "Buffer", "ECPair", "Function", "Number", "Point", "Script"]
-            }
           })
+          //new webpack.optimize.DedupePlugin(),
+          //new webpackConfig.optimization.minimize({
+          //  mangle: {
+          //    except: ["Array", "BigInteger", "Boolean", "Buffer", "ECPair", "Function", "Number", "Point", "Script"]
+          //  }
+          //})
         )
       },
       "build-dev": {

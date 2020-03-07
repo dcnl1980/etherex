@@ -1,4 +1,5 @@
 var path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -13,9 +14,17 @@ module.exports = {
     tls: 'empty'
   },
   output: {
-    /* global __dirname */
     path: path.join(__dirname, "app"),
     filename: "app.js"
+  },
+  optimization: {
+    minimizer: [new UglifyJsPlugin({
+      uglifyOptions: {
+        mangle: {
+          except: ["Array", "BigInteger", "Boolean", "Buffer", "ECPair", "Function", "Number", "Point", "Script"]
+        }
+      }
+    })],
   },
   plugins: [],
   resolve: {
