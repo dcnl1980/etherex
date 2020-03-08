@@ -9,18 +9,18 @@ module.exports = function(grunt) {
       options: webpackConfig,
       build: {
         plugins: webpackConfig.plugins.concat(
-          new webpack.DefinePlugin({
-            "process.env": {
-              // This has effect on the react lib size
-              "NODE_ENV": JSON.stringify("production")
-            }
-          })
-          //new webpack.optimize.DedupePlugin()
-          //new webpackConfig.optimization.minimize({
-          //  mangle: {
-          //    except: ["Array", "BigInteger", "Boolean", "Buffer", "ECPair", "Function", "Number", "Point", "Script"]
-          //  }
-          //})
+            new webpack.DefinePlugin({
+              "process.env": {
+                // This has effect on the react lib size
+                "NODE_ENV": JSON.stringify("production")
+              }
+            })
+            //new webpack.optimize.DedupePlugin()
+            //new webpackConfig.optimization.minimize({
+            //  mangle: {
+            //    except: ["Array", "BigInteger", "Boolean", "Buffer", "ECPair", "Function", "Number", "Point", "Script"]
+            //  }
+            //})
         )
       },
       "build-dev": {
@@ -33,19 +33,19 @@ module.exports = function(grunt) {
         webpack: webpackConfig
       },
       start: {
-        keepAlive: true,
+        //keepAlive: true,
         port: 8085,
         contentBase: "app",
         hot: true,
         webpack: {
           devtool: "eval",
-          debug: true,
-          entry: webpackConfig.entry.concat(
-            "webpack-dev-server/client?http://localhost:8085", // Localhost development
-            "webpack/hot/dev-server"
-          ),
+          //debug: true,
+          //entry: webpackConfig.entry.concat(
+          //    "webpack-dev-server/client?http://localhost:8085", // Localhost development
+          //    "webpack/hot/dev-server"
+          //),
           plugins: webpackConfig.plugins.concat(
-            new webpack.HotModuleReplacementPlugin()
+              new webpack.HotModuleReplacementPlugin()
           )
         }
       }

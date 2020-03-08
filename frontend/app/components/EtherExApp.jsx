@@ -17,16 +17,18 @@ import RangeSelect from './RangeSelect';
 import GraphPrice from './GraphPrice';
 import Network from './Network';
 import Chat from './Chat';
+import localesSupported from 'intl-locales-supported';
+import fixtures from '../js/fixtures';
 
-let fixtures = require('../js/fixtures');
 
 // Load Intl data
-let localesSupported = require('intl-locales-supported');
+
 let i18n = {
   locales: ['en-US']
 };
 
 if (window.Intl) {
+
   // Determine if the built-in `Intl` has the locale data we need.
   if (!localesSupported(i18n.locales)) {
     // `Intl` exists, but it doesn't have the data we need, so load the
@@ -35,6 +37,7 @@ if (window.Intl) {
     window.Intl.NumberFormat = window.IntlPolyfill.NumberFormat;
     window.Intl.DateTimeFormat = window.IntlPolyfill.DateTimeFormat;
   }
+
 } else {
   // No `Intl`, so use and load the polyfill.
   window.Intl = require("intl/dist/Intl").Intl;
@@ -43,6 +46,8 @@ if (window.Intl) {
   window.Intl.DateTimeFormat = window.IntlPolyfill.DateTimeFormat;
   require("intl/locale-data/jsonp/en-US");
 }
+
+
 
 let intlData = require('../js/intlData');
 let messages = flatten(intlData.messages);
