@@ -18,7 +18,8 @@ TODO:
 - fix all vulnerabilities in the code
 
 UPDATES:
-- updated to Webpack 2.7
+- [frontend] update EtherEx to version 0.10.1
+- [frontend] updated to Webpack 2.7
 
 About
 -----
