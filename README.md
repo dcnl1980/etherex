@@ -1,9 +1,6 @@
 EtherEx
 =======
-[![Build Status](https://travis-ci.org/etherex/etherex.svg?branch=master)](https://travis-ci.org/etherex/etherex)
-[![Dependency Status](https://david-dm.org/etherex/etherex.svg?path=frontend)](https://david-dm.org/etherex/etherex?path=frontend)
-[![devDependency Status](https://david-dm.org/etherex/etherex/dev-status.svg?path=frontend)](https://david-dm.org/etherex/etherex?path=frontend#info=devDependencies)
-[![SlackIn](http://slack.etherex.org/badge.svg)](http://slack.etherex.org) [![Join the chat at https://gitter.im/etherex/etherex](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/etherex/etherex?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/dcnl1980/etherex.svg?branch=master)](https://travis-ci.org/dcnl1980/etherex)
 
 Decentralized exchange built on Ethereum.
 
@@ -13,9 +10,14 @@ Decentralized exchange built on Ethereum.
 Development updates (2020)
 -----
 
-NPM: found 59 vulnerabilities (19 low, 18 moderate, 20 high, 2 critical)
+(2020/03/07) NPM: found 59 vulnerabilities (19 low, 18 moderate, 20 high, 2 critical)
+(2020/03/08) NPM: found 17 vulnerabilities (5 low, 5 moderate, 7 high)
 
-TODO: fix all vulnerabilities in the code
+TODO: 
+- fix all vulnerabilities in the code
+
+UPDATES:
+- updated to Webpack 2.7
 
 About
 -----
