@@ -11,6 +11,7 @@ Development updates (2020)
 -----
 
 (2020/03/07) NPM: found 59 vulnerabilities (19 low, 18 moderate, 20 high, 2 critical)
+
 (2020/03/08) NPM: found 17 vulnerabilities (5 low, 5 moderate, 7 high)
 
 TODO: 
