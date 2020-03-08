@@ -15,7 +15,7 @@ module.exports = function(grunt) {
               "NODE_ENV": JSON.stringify("production")
             }
           })
-          //new webpack.optimize.DedupePlugin(),
+          //new webpack.optimize.DedupePlugin()
           //new webpackConfig.optimization.minimize({
           //  mangle: {
           //    except: ["Array", "BigInteger", "Boolean", "Buffer", "ECPair", "Function", "Number", "Point", "Script"]

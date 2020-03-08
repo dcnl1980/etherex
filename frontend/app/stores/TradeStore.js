@@ -314,8 +314,7 @@ var TradeStore = Fluxxor.createStore({
 
     var trades = (payload.type == 1) ? this.trades.tradeSells : this.trades.tradeBuys;
     var siblings = (payload.type == 1) ? this.trades.tradeBuys : this.trades.tradeSells;
-    var totalAmount = 0;
-    var tradesTotal = 0;
+
     var filling = [];
     var amountLeft = payload.amount;
     var available = payload.total;
@@ -334,13 +333,15 @@ var TradeStore = Fluxxor.createStore({
     if (trades)
       for (i = 0; i <= trades.length - 1; i++) {
         var thisTotal = 0;
+        var totalAmount = 0;
+        var tradesTotal = 0;
 
         // Add totals and amounts
         if (trades[i].owner != payload.user.id) {
           thisTotal = trades[i].amount * trades[i].price;
           // console.log("against total of " + thisTotal);
-          totalAmount += trades[i].amount;
-          tradesTotal += thisTotal;
+          totalAmount = totalAmount + trades[i].amount;
+          tradesTotal = tradesTotal + thisTotal;
         }
 
         // Reset to normal first if we no longer have enough
