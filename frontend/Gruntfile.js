@@ -37,6 +37,7 @@ module.exports = function(grunt) {
         port: 8085,
         contentBase: "app",
         hot: true,
+	host: "0.0.0.0",
         webpack: {
           devtool: "eval",
           //debug: true,
