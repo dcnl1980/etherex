@@ -59,7 +59,8 @@ git clone https://github.com/dcnl1980/etherex.git
 This will install `pyethereum` and `ethereum-serpent` if you don't already have those installed.
 
 ```
-pip install -r dev_requirements.txt
+sudo apt install python3-pip
+pip3 install -r dev_requirements.txt
 ```
 
 #### Running tests

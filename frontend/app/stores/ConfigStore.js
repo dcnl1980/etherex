@@ -7,7 +7,7 @@ var ConfigStore = Fluxxor.createStore({
   initialize: function () {
     this.host = process.env.RPC_HOST || fixtures.host;
     this.address = fixtures.addresses.etherex;
-    this.network = 2; // default to testnet
+    this.network = 42; // default to testnet kovan
     this.ethereumClient = null;
     this.btcSwapAddress = fixtures.addresses.btcswap;
     this.btcSwapClient = null;
