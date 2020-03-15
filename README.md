@@ -14,12 +14,15 @@ Development updates (2020)
 
 (2020/03/08) NPM: found 17 vulnerabilities (5 low, 5 moderate, 7 high)
 
+(2020/03/14) Added Parity Kovan testnet blockchain. See blockchain directory. Run docker-compose up -d. After 10 minutes Kovan testnet is ready.
+
 TODO: 
 - fix all vulnerabilities in the code
 
 UPDATES:
 - [frontend] update EtherEx to version 0.10.1
 - [frontend] updated to Webpack 2.7
+- [blockchain] added parity docker, runs on Kovan blockchain.
 
 About
 -----
@@ -71,6 +74,26 @@ py.test -vvrs
 
 Refer to [Serpent](https://github.com/ethereum/serpent) and [pyethereum](https://github.com/ethereum/pyethereum) for their respective usage.
 
+#### Run Kovan blockchain
+
+```
+cd blockchain/parity-docker-testnet/
+docker-compose up -d
+```
+
+If you want to check the blockchain sync status, simple run: docker-compose logs
+
+Fire a query on the RPC:
+
+```
+curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x0037a6b811ffeb6e072da21179d11b1406371c63", "latest"],"id":1}' http://127.0.0.1:8545
+```
+
+Output will be: 
+
+```
+{"jsonrpc":"2.0","result":"0x3c3a38e5ab72fc0000","id":1} // Balance in Hex 1.111 ETH
+```
 
 ### UI development
 
