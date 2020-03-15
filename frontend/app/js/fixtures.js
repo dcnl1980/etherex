@@ -37,7 +37,7 @@ var fixtures = {
       rangeEnd: 2475
     },
     network: {
-      client: "Geth/v0.9.39/darwin/go1.4.2",
+      client: "Geth/v0.9.39/darwin/go1.6.2",
       peerCount: 0,
       blockChainAge: 12,
       blockNumber: 2945,

@@ -2,7 +2,13 @@ import _ from 'lodash';
 import utils from '../js/utils';
 var constants = require("../js/constants");
 var Web3 = require('web3');
-var web3 = new Web3();
+
+if (typeof web3 !== 'undefined') {
+   web3 = new Web3(web3.currentProvider);
+} else {
+   // set the provider you want from Web3.providers
+   var web3 = new Web3(new Web3.providers.HttpProvider("http://10.10.10.20:8545"));
+}
 
 var MarketActions = function() {
 
