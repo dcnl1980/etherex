@@ -75,7 +75,7 @@
     "intl": "^1.1.0",
     "intl-locales-supported": "^1.0.0",
     "keymirror": "^0.1.1",
-    "lodash": "^4.9.0",
+    "lodash": "^4.17.23",
     "numeral": "^1.5.3",
     "react": "^15.0.1",
     "react-addons-perf": "^15.0.1",
@@ -89,7 +89,7 @@
     "techan": "caktux/techan.js",
     "ua-parser-js": "^0.7.10",
     "web3": "^0.20.7",
-    "snyk": "^1.298.1"
+    "snyk": "^1.996.0"
   },
   "snyk": true
 }
